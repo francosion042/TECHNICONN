@@ -1,5 +1,5 @@
 const Sequelize = require("sequelize");
-const DB = require("../config/db/db");
+const DB = require("../config/database/db");
 
 const ISP_Profiles = DB.define("ISP_Profiles", {
   first_name: {

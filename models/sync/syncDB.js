@@ -1,4 +1,4 @@
-const DB = require("../../config/db/db");
+const DB = require("../../config/database/db");
 
 /**
  * Snchronizing the Tables with the database
