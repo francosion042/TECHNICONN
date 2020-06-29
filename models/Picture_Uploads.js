@@ -5,7 +5,7 @@ const Picture_Uploads = DB.define("Picture_Uploads", {
   caption: {
     type: Sequelize.TEXT,
   },
-  picture: {
+  image: {
     type: Sequelize.TEXT,
   },
 });

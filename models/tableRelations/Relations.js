@@ -1,25 +1,34 @@
 /**
  * This file is for creating relationships.
  */
-const { Users } = require("../Users");
-const { Client_Profiles } = require("../Clients");
-const { Skills } = require("../Skills");
-const { Picture_Uploads } = require("../Picture_Uploads");
-const { Administrators } = require("../Administrators");
-const { Provider_Certificates } = require("../Provider_Certificates");
-const { Portfolios } = require("../Portfolios");
 const {
-  ISP_Educations,
+  Accounts,
+  Users,
+  Skills,
+  Picture_Uploads,
+  Administrators,
+  Provider_Certificates,
+  Portfolios,
   ISP_Profiles,
+  ISP_Educations,
   ISP_Work_Experiences,
-} = require("../ISP");
-const {
+  CSP_Profiles,
   CSP_Addresses,
   CSP_Mobiles,
-  CSP_Profiles,
   CSP_Work_Experiences,
-} = require("../CSP");
+} = require("../index");
 
+/**
+ * @Accounts can only have one @User or @Administrator at a time
+ */
+Accounts.hasOne(Users, {
+  foreignKey: "account_id",
+  onDelete: "CASCADE",
+});
+Accounts.hasOne(Administrators, {
+  foreignKey: "account_id",
+  onDelete: "CASCADE",
+});
 /**
  * @ISP_Profile has a child relationship to the @Users
  * @ISP_Profile has many children of @ISP_Education
@@ -63,14 +72,6 @@ CSP_Mobiles.belongsTo(CSP_Profiles, {
 });
 CSP_Work_Experiences.belongsTo(CSP_Profiles, {
   foreignKey: "csp_id",
-  onDelete: "CASCADE",
-});
-
-/**
- * @User can  only have one @client Profile
- */
-Users.hasOne(Client_Profiles, {
-  foreignKey: "user_id",
   onDelete: "CASCADE",
 });
 

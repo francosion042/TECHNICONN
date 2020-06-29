@@ -17,6 +17,9 @@ const CSP_Profiles = DB.define("CSP_Profiles", {
   short_bio: {
     type: Sequelize.TEXT,
   },
+  category: {
+    type: Sequelize.STRING,
+  },
   about_company: {
     type: Sequelize.TEXT,
   },

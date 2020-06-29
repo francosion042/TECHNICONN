@@ -26,6 +26,9 @@ const ISP_Profiles = DB.define("ISP_Profiles", {
   short_bio: {
     type: Sequelize.TEXT,
   },
+  category: {
+    type: Sequelize.STRING,
+  },
   address: {
     type: Sequelize.TEXT,
   },
