@@ -23,12 +23,12 @@ app.get("/api/v1", (req, res) => {
 });
 
 /**
- * Account creation route
+ * @description Account creation route
  * @params req and res
  */
 app.use("/api/v1", require("./routes/api/accounts"));
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
   console.log(`Server Started on Port ${PORT}`);
