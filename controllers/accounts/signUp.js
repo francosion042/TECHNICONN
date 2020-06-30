@@ -1,8 +1,11 @@
-const DB = require("../../config/database/db");
 const { Accounts } = require("../../models");
-const { hashPassword } = require("../../utils");
+const { hashPassword, generateToken } = require("../../utils");
 const { validationResult } = require("express-validator");
-
+/**
+ * Function for signining up
+ * @param {object} req
+ * @param {object} res
+ */
 const signUp = async (req, res) => {
   const { email, password } = req.body;
 
@@ -30,9 +33,19 @@ const signUp = async (req, res) => {
       email: email,
       password: hashedpassword,
     })
-      .then(() => {
+      .then(async (newAccount) => {
+        // Generate token for the new account
+        const token = await generateToken({
+          accountId: newAccount.dataValues.id,
+          accountEmail: newAccount.dataValues.email,
+        });
         res.status(201).json({
           message: "Account created",
+          data: {
+            accountId: newAccount.dataValues.id,
+            accountEmail: newAccount.dataValues.email,
+            token: token,
+          },
         });
       })
       .catch((err) => {
@@ -47,4 +60,5 @@ const signUp = async (req, res) => {
     });
   }
 };
+
 module.exports = signUp;

@@ -1,3 +1,6 @@
 const { hashPassword, comparePassword } = require("./bcrypt");
-
-module.exports = { hashPassword, comparePassword };
+const { generateToken, verifyToken } = require("./jwt");
+/**
+ * Exports the util files to the application level
+ */
+module.exports = { hashPassword, comparePassword, generateToken, verifyToken };

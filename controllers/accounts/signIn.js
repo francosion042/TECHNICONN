@@ -1,8 +1,12 @@
-const DB = require("../../config/database/db");
 const { Accounts } = require("../../models");
-const { comparePassword } = require("../../utils");
+const { comparePassword, generateToken } = require("../../utils");
 const { validationResult } = require("express-validator");
 
+/**
+ * Authenticates a user
+ * @param {object} req
+ * @param {object} res
+ */
 const signIn = async (req, res) => {
   const { email, password } = req.body;
 
@@ -27,7 +31,22 @@ const signIn = async (req, res) => {
     // Get the hashed password from the record
     const hashedPassword = account.dataValues.password;
     if (comparePassword(hashedPassword, password)) {
-      console.log("signed In");
+      /**
+       * Generate a token for the user
+       * It will Pass In the @AccountID and @AccountEmail as the Payload
+       */
+      const token = await generateToken({
+        accountId: account.dataValues.id,
+        accountEmail: account.dataValues.email,
+      });
+      res.status(200).json({
+        message: "Successfully signed In",
+        data: {
+          accountId: account.dataValues.id,
+          accountEmail: account.dataValues.email,
+          token: token,
+        },
+      });
     } else {
       res.status(401).json({
         message: "Incorrect Password! Try again",
