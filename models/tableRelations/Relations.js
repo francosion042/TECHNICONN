@@ -76,14 +76,6 @@ CSP_Work_Experiences.belongsTo(CSP_Profiles, {
 });
 
 /**
- * @User can only have one @Administrator profile, if A @SuperAdmin wishes to make the user an admin
- */
-Users.hasOne(Administrators, {
-  foreignKey: "user_id",
-  onDelete: "CASCADE",
-});
-
-/**
  * @ISP_Profile can have many @Picture_Uploads
  * @CSP_Profile can have many @Picture_Uploads
  */
