@@ -14,19 +14,29 @@ const auth = async (req, res, next) => {
     if (authorization === undefined) throw new Error("no auth");
     const token = authorization.split(" ")[1];
     if (!token || token === "") {
-      return errorResponse(res, 401, "Access denied");
+      res.status(401).json({
+        message: "Access denied.",
+      });
     }
+
+    // verify Token
     const decoded = await verifyToken(token);
     if (!(decoded && decoded.accountId)) {
-      return errorResponse(res, 401, "Access denied. We could not verify user");
+      res.status(401).json({
+        message: "Access denied. We could not verify user",
+      });
     }
     req.user = decoded;
     return next();
   } catch (error) {
     if (error.message === "no auth" || error.message === "jwt expired") {
-      return errorResponse(res, 401, "Authorization failed");
+      res.status(401).json({
+        message: "Authorization failed",
+      });
     }
-    return errorResponse(res, 500, "Server error");
+    res.status(500).json({
+      message: "Server error",
+    });
   }
 };
 

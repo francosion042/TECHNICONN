@@ -1,0 +1,721 @@
+{
+    "extension": "linecounter",
+    "version": "0.2.7",
+    "workspace": "/home/anthony/Projects/Startup Projects/TECHNICONN",
+    "linecount": [
+        {
+            "version": "0.2.7",
+            "counttime": "2020-07-01 00:11:56",
+            "filesum": 34,
+            "codesum": 2030,
+            "commentsum": 135,
+            "blanksum": 63,
+            "statistics": {
+                ".json": {
+                    "code": 1393,
+                    "comment": 0,
+                    "blank": 0
+                },
+                ".js": {
+                    "code": 610,
+                    "comment": 135,
+                    "blank": 59
+                },
+                "": {
+                    "code": 25,
+                    "comment": 0,
+                    "blank": 4
+                },
+                ".md": {
+                    "code": 2,
+                    "comment": 0,
+                    "blank": 0
+                }
+            },
+            "filelist": [
+                {
+                    "blank": 0,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": ".env"
+                },
+                {
+                    "blank": 0,
+                    "code": 2,
+                    "comment": 0,
+                    "filename": ".gitignore"
+                },
+                {
+                    "blank": 5,
+                    "code": 25,
+                    "comment": 7,
+                    "filename": "config/database/db.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "controllers/accounts/deleteAccount.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 41,
+                    "comment": 16,
+                    "filename": "controllers/accounts/signIn.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 46,
+                    "comment": 14,
+                    "filename": "controllers/accounts/signUp.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "controllers/accounts/updateAccount.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "controllers/index.js"
+                },
+                {
+                    "filename": "Documentation And Plan/Technician NOTES.docx",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "Documentation And Plan/Techniconn IDEA AND PLAN.docx",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 4,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "LICENSE"
+                },
+                {
+                    "blank": 1,
+                    "code": 25,
+                    "comment": 7,
+                    "filename": "middlewares/authenticate.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "models/Accounts.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "models/Administrators.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 73,
+                    "comment": 0,
+                    "filename": "models/CSP.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 31,
+                    "comment": 8,
+                    "filename": "models/index.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 78,
+                    "comment": 0,
+                    "filename": "models/ISP.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "models/Picture_Uploads.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 14,
+                    "comment": 0,
+                    "filename": "models/Portfolios.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "models/Provider_Certificates.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 8,
+                    "comment": 0,
+                    "filename": "models/Skills.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 20,
+                    "comment": 5,
+                    "filename": "models/sync/syncDB.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 80,
+                    "comment": 30,
+                    "filename": "models/tableRelations/Relations.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 35,
+                    "comment": 0,
+                    "filename": "models/Users.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1360,
+                    "comment": 0,
+                    "filename": "package-lock.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 33,
+                    "comment": 0,
+                    "filename": "package.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 2,
+                    "comment": 0,
+                    "filename": "README.md"
+                },
+                {
+                    "blank": 5,
+                    "code": 32,
+                    "comment": 8,
+                    "filename": "routes/api/accounts.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "routes/api/skills.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 2,
+                    "comment": 0,
+                    "filename": "routes/api/users.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 19,
+                    "comment": 11,
+                    "filename": "server.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 7,
+                    "comment": 11,
+                    "filename": "utils/bcrypt.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 3,
+                    "filename": "utils/index.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 12,
+                    "comment": 15,
+                    "filename": "utils/jwt.js"
+                }
+            ]
+        },
+        {
+            "version": "0.2.7",
+            "counttime": "2020-07-01 00:12:48",
+            "filesum": 34,
+            "codesum": 2030,
+            "commentsum": 135,
+            "blanksum": 63,
+            "statistics": {
+                ".json": {
+                    "code": 1393,
+                    "comment": 0,
+                    "blank": 0
+                },
+                "": {
+                    "code": 25,
+                    "comment": 0,
+                    "blank": 4
+                },
+                ".js": {
+                    "code": 610,
+                    "comment": 135,
+                    "blank": 59
+                },
+                ".md": {
+                    "code": 2,
+                    "comment": 0,
+                    "blank": 0
+                }
+            },
+            "filelist": [
+                {
+                    "blank": 0,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": ".env"
+                },
+                {
+                    "blank": 0,
+                    "code": 2,
+                    "comment": 0,
+                    "filename": ".gitignore"
+                },
+                {
+                    "blank": 5,
+                    "code": 25,
+                    "comment": 7,
+                    "filename": "config/database/db.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "controllers/accounts/deleteAccount.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 41,
+                    "comment": 16,
+                    "filename": "controllers/accounts/signIn.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 46,
+                    "comment": 14,
+                    "filename": "controllers/accounts/signUp.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "controllers/accounts/updateAccount.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "controllers/index.js"
+                },
+                {
+                    "filename": "Documentation And Plan/Technician NOTES.docx",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "Documentation And Plan/Techniconn IDEA AND PLAN.docx",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 4,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "LICENSE"
+                },
+                {
+                    "blank": 1,
+                    "code": 25,
+                    "comment": 7,
+                    "filename": "middlewares/authenticate.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "models/Accounts.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "models/Administrators.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 73,
+                    "comment": 0,
+                    "filename": "models/CSP.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 31,
+                    "comment": 8,
+                    "filename": "models/index.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 78,
+                    "comment": 0,
+                    "filename": "models/ISP.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "models/Picture_Uploads.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 14,
+                    "comment": 0,
+                    "filename": "models/Portfolios.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "models/Provider_Certificates.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 8,
+                    "comment": 0,
+                    "filename": "models/Skills.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 20,
+                    "comment": 5,
+                    "filename": "models/sync/syncDB.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 80,
+                    "comment": 30,
+                    "filename": "models/tableRelations/Relations.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 35,
+                    "comment": 0,
+                    "filename": "models/Users.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1360,
+                    "comment": 0,
+                    "filename": "package-lock.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 33,
+                    "comment": 0,
+                    "filename": "package.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 2,
+                    "comment": 0,
+                    "filename": "README.md"
+                },
+                {
+                    "blank": 5,
+                    "code": 32,
+                    "comment": 8,
+                    "filename": "routes/api/accounts.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "routes/api/skills.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 2,
+                    "comment": 0,
+                    "filename": "routes/api/users.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 19,
+                    "comment": 11,
+                    "filename": "server.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 7,
+                    "comment": 11,
+                    "filename": "utils/bcrypt.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 3,
+                    "filename": "utils/index.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 12,
+                    "comment": 15,
+                    "filename": "utils/jwt.js"
+                }
+            ]
+        },
+        {
+            "version": "0.2.7",
+            "counttime": "2020-07-01 14:18:30",
+            "filesum": 34,
+            "codesum": 2109,
+            "commentsum": 157,
+            "blanksum": 72,
+            "statistics": {
+                ".js": {
+                    "code": 689,
+                    "comment": 157,
+                    "blank": 68
+                },
+                "": {
+                    "code": 25,
+                    "comment": 0,
+                    "blank": 4
+                },
+                ".json": {
+                    "code": 1393,
+                    "comment": 0,
+                    "blank": 0
+                },
+                ".md": {
+                    "code": 2,
+                    "comment": 0,
+                    "blank": 0
+                }
+            },
+            "filelist": [
+                {
+                    "blank": 0,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": ".env"
+                },
+                {
+                    "blank": 0,
+                    "code": 2,
+                    "comment": 0,
+                    "filename": ".gitignore"
+                },
+                {
+                    "blank": 5,
+                    "code": 25,
+                    "comment": 7,
+                    "filename": "config/database/db.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "controllers/accounts/deleteAccount.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 41,
+                    "comment": 16,
+                    "filename": "controllers/accounts/signIn.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 46,
+                    "comment": 14,
+                    "filename": "controllers/accounts/signUp.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "controllers/accounts/updateAccount.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 58,
+                    "comment": 14,
+                    "filename": "controllers/users/createUsers.js"
+                },
+                {
+                    "filename": "Documentation And Plan/Technician NOTES.docx",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "Documentation And Plan/Techniconn IDEA AND PLAN.docx",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 4,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "LICENSE"
+                },
+                {
+                    "blank": 2,
+                    "code": 33,
+                    "comment": 8,
+                    "filename": "middlewares/authenticate.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "models/Accounts.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "models/Administrators.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 73,
+                    "comment": 0,
+                    "filename": "models/CSP.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 31,
+                    "comment": 8,
+                    "filename": "models/index.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 78,
+                    "comment": 0,
+                    "filename": "models/ISP.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "models/Picture_Uploads.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 14,
+                    "comment": 0,
+                    "filename": "models/Portfolios.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "models/Provider_Certificates.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 8,
+                    "comment": 0,
+                    "filename": "models/Skills.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 20,
+                    "comment": 5,
+                    "filename": "models/sync/syncDB.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 80,
+                    "comment": 30,
+                    "filename": "models/tableRelations/Relations.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 35,
+                    "comment": 0,
+                    "filename": "models/Users.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1360,
+                    "comment": 0,
+                    "filename": "package-lock.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 33,
+                    "comment": 0,
+                    "filename": "package.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 2,
+                    "comment": 0,
+                    "filename": "README.md"
+                },
+                {
+                    "blank": 5,
+                    "code": 32,
+                    "comment": 8,
+                    "filename": "routes/api/accounts.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "routes/api/skills.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 14,
+                    "comment": 4,
+                    "filename": "routes/api/users.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 20,
+                    "comment": 14,
+                    "filename": "server.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 7,
+                    "comment": 11,
+                    "filename": "utils/bcrypt.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 3,
+                    "filename": "utils/index.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 12,
+                    "comment": 15,
+                    "filename": "utils/jwt.js"
+                }
+            ]
+        }
+    ]
+}

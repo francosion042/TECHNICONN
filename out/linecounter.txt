@@ -1,0 +1,162 @@
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2020-07-01 00:11:56
+count workspace : /home/anthony/Projects/Startup Projects/TECHNICONN
+total files : 34
+total code lines : 2030
+total comment lines : 135
+total blank lines : 63
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |          .json|           1393|              0|              0|     69|
+   |            .js|            610|            135|             59|     30|
+   |               |             25|              0|              4|    1.2|
+   |            .md|              2|              0|              0|  0.099|
+   -------------------------------------------------------------------------
+.env, code is 6, comment is 0, blank is 0.
+.gitignore, code is 2, comment is 0, blank is 0.
+config/database/db.js, code is 25, comment is 7, blank is 5.
+controllers/accounts/deleteAccount.js, code is 0, comment is 0, blank is 0.
+controllers/accounts/signIn.js, code is 41, comment is 16, blank is 5.
+controllers/accounts/signUp.js, code is 46, comment is 14, blank is 4.
+controllers/accounts/updateAccount.js, code is 0, comment is 0, blank is 0.
+controllers/index.js, code is 0, comment is 0, blank is 0.
+Documentation And Plan/Technician NOTES.docx, it is a binary file.
+Documentation And Plan/Techniconn IDEA AND PLAN.docx, it is a binary file.
+LICENSE, code is 17, comment is 0, blank is 4.
+middlewares/authenticate.js, code is 25, comment is 7, blank is 1.
+models/Accounts.js, code is 11, comment is 0, blank is 1.
+models/Administrators.js, code is 20, comment is 0, blank is 1.
+models/CSP.js, code is 73, comment is 0, blank is 4.
+models/index.js, code is 31, comment is 8, blank is 3.
+models/ISP.js, code is 78, comment is 0, blank is 4.
+models/Picture_Uploads.js, code is 11, comment is 0, blank is 1.
+models/Portfolios.js, code is 14, comment is 0, blank is 2.
+models/Provider_Certificates.js, code is 17, comment is 0, blank is 1.
+models/Skills.js, code is 8, comment is 0, blank is 1.
+models/sync/syncDB.js, code is 20, comment is 5, blank is 3.
+models/tableRelations/Relations.js, code is 80, comment is 30, blank is 5.
+models/Users.js, code is 35, comment is 0, blank is 1.
+package-lock.json, code is 1360, comment is 0, blank is 0.
+package.json, code is 33, comment is 0, blank is 0.
+README.md, code is 2, comment is 0, blank is 0.
+routes/api/accounts.js, code is 32, comment is 8, blank is 5.
+routes/api/skills.js, code is 0, comment is 0, blank is 0.
+routes/api/users.js, code is 2, comment is 0, blank is 0.
+server.js, code is 19, comment is 11, blank is 5.
+utils/bcrypt.js, code is 7, comment is 11, blank is 3.
+utils/index.js, code is 3, comment is 3, blank is 0.
+utils/jwt.js, code is 12, comment is 15, blank is 4.
+===============================================================================
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2020-07-01 00:12:48
+count workspace : /home/anthony/Projects/Startup Projects/TECHNICONN
+total files : 34
+total code lines : 2030
+total comment lines : 135
+total blank lines : 63
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |          .json|           1393|              0|              0|     69|
+   |               |             25|              0|              4|    1.2|
+   |            .js|            610|            135|             59|     30|
+   |            .md|              2|              0|              0|  0.099|
+   -------------------------------------------------------------------------
+.env, code is 6, comment is 0, blank is 0.
+.gitignore, code is 2, comment is 0, blank is 0.
+config/database/db.js, code is 25, comment is 7, blank is 5.
+controllers/accounts/deleteAccount.js, code is 0, comment is 0, blank is 0.
+controllers/accounts/signIn.js, code is 41, comment is 16, blank is 5.
+controllers/accounts/signUp.js, code is 46, comment is 14, blank is 4.
+controllers/accounts/updateAccount.js, code is 0, comment is 0, blank is 0.
+controllers/index.js, code is 0, comment is 0, blank is 0.
+Documentation And Plan/Technician NOTES.docx, it is a binary file.
+Documentation And Plan/Techniconn IDEA AND PLAN.docx, it is a binary file.
+LICENSE, code is 17, comment is 0, blank is 4.
+middlewares/authenticate.js, code is 25, comment is 7, blank is 1.
+models/Accounts.js, code is 11, comment is 0, blank is 1.
+models/Administrators.js, code is 20, comment is 0, blank is 1.
+models/CSP.js, code is 73, comment is 0, blank is 4.
+models/index.js, code is 31, comment is 8, blank is 3.
+models/ISP.js, code is 78, comment is 0, blank is 4.
+models/Picture_Uploads.js, code is 11, comment is 0, blank is 1.
+models/Portfolios.js, code is 14, comment is 0, blank is 2.
+models/Provider_Certificates.js, code is 17, comment is 0, blank is 1.
+models/Skills.js, code is 8, comment is 0, blank is 1.
+models/sync/syncDB.js, code is 20, comment is 5, blank is 3.
+models/tableRelations/Relations.js, code is 80, comment is 30, blank is 5.
+models/Users.js, code is 35, comment is 0, blank is 1.
+package-lock.json, code is 1360, comment is 0, blank is 0.
+package.json, code is 33, comment is 0, blank is 0.
+README.md, code is 2, comment is 0, blank is 0.
+routes/api/accounts.js, code is 32, comment is 8, blank is 5.
+routes/api/skills.js, code is 0, comment is 0, blank is 0.
+routes/api/users.js, code is 2, comment is 0, blank is 0.
+server.js, code is 19, comment is 11, blank is 5.
+utils/bcrypt.js, code is 7, comment is 11, blank is 3.
+utils/index.js, code is 3, comment is 3, blank is 0.
+utils/jwt.js, code is 12, comment is 15, blank is 4.
+===============================================================================
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2020-07-01 14:18:30
+count workspace : /home/anthony/Projects/Startup Projects/TECHNICONN
+total files : 34
+total code lines : 2109
+total comment lines : 157
+total blank lines : 72
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |            .js|            689|            157|             68|     33|
+   |               |             25|              0|              4|    1.2|
+   |          .json|           1393|              0|              0|     66|
+   |            .md|              2|              0|              0|  0.095|
+   -------------------------------------------------------------------------
+.env, code is 6, comment is 0, blank is 0.
+.gitignore, code is 2, comment is 0, blank is 0.
+config/database/db.js, code is 25, comment is 7, blank is 5.
+controllers/accounts/deleteAccount.js, code is 0, comment is 0, blank is 0.
+controllers/accounts/signIn.js, code is 41, comment is 16, blank is 5.
+controllers/accounts/signUp.js, code is 46, comment is 14, blank is 4.
+controllers/accounts/updateAccount.js, code is 0, comment is 0, blank is 0.
+controllers/users/createUsers.js, code is 58, comment is 14, blank is 5.
+Documentation And Plan/Technician NOTES.docx, it is a binary file.
+Documentation And Plan/Techniconn IDEA AND PLAN.docx, it is a binary file.
+LICENSE, code is 17, comment is 0, blank is 4.
+middlewares/authenticate.js, code is 33, comment is 8, blank is 2.
+models/Accounts.js, code is 11, comment is 0, blank is 1.
+models/Administrators.js, code is 20, comment is 0, blank is 1.
+models/CSP.js, code is 73, comment is 0, blank is 4.
+models/index.js, code is 31, comment is 8, blank is 3.
+models/ISP.js, code is 78, comment is 0, blank is 4.
+models/Picture_Uploads.js, code is 11, comment is 0, blank is 1.
+models/Portfolios.js, code is 14, comment is 0, blank is 2.
+models/Provider_Certificates.js, code is 17, comment is 0, blank is 1.
+models/Skills.js, code is 8, comment is 0, blank is 1.
+models/sync/syncDB.js, code is 20, comment is 5, blank is 3.
+models/tableRelations/Relations.js, code is 80, comment is 30, blank is 5.
+models/Users.js, code is 35, comment is 0, blank is 1.
+package-lock.json, code is 1360, comment is 0, blank is 0.
+package.json, code is 33, comment is 0, blank is 0.
+README.md, code is 2, comment is 0, blank is 0.
+routes/api/accounts.js, code is 32, comment is 8, blank is 5.
+routes/api/skills.js, code is 0, comment is 0, blank is 0.
+routes/api/users.js, code is 14, comment is 4, blank is 2.
+server.js, code is 20, comment is 14, blank is 6.
+utils/bcrypt.js, code is 7, comment is 11, blank is 3.
+utils/index.js, code is 3, comment is 3, blank is 0.
+utils/jwt.js, code is 12, comment is 15, blank is 4.
+===============================================================================

@@ -21,7 +21,7 @@ const Users = DB.define("Users", {
     type: Sequelize.TEXT,
   },
   address: {
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
   },
   city: {
     type: Sequelize.STRING,
