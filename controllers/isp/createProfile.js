@@ -1,13 +1,14 @@
+const { ISP_Profiles } = require("../../models/ISP");
 const { Users } = require("../../models/Users");
 const { validationResult } = require("express-validator");
 const { dataUri } = require("../../middlewares/multerUpload");
 const { uploader } = require("../../config/services/cloudinaryConfig");
 /**
- * @descripion function for the user profile creation
+ * @description function for the ISP profile creation
  * @param {Object} req
  * @param {Object} res
  */
-const createUsers = async (req, res) => {
+const createProfile = async (req, res) => {
   // Finds the validation errors in this request and wraps them in an object with handy functions
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
@@ -18,28 +19,38 @@ const createUsers = async (req, res) => {
   const {
     first_name,
     last_name,
+    email,
     gender,
     mobile,
     short_bio,
+    category,
     address,
     city,
     state,
     nationality,
+    long_bio,
   } = req.body;
 
   // Get the accountId from the Token payload
   const { accountId } = req.user;
 
-  /**
-   * @description Check if the Account already has a user profile.
-   * if not,  then create one, else, reject
-   */
+  // Get the user profile, so as to extract the user id
   const user = await Users.findOne({
     where: {
       account_id: accountId,
     },
   });
-  if (!user) {
+
+  /**
+   * @description Check if the Account already has a user profile.
+   * if not,  then create one, else, reject
+   */
+  const isp = await ISP_Profiles.findOne({
+    where: {
+      user_id: user.dataValues.id,
+    },
+  });
+  if (!isp) {
     /**
      * @description Check if the user added a profile image
      */
@@ -55,22 +66,26 @@ const createUsers = async (req, res) => {
     Users.create({
       first_name: first_name,
       last_name: last_name,
+      email: email,
       gender: gender,
       mobile: mobile,
       avatar: image,
+      cover_photo: "",
       short_bio: short_bio,
+      category: category,
       address: address,
       city: city,
       state: state,
       nationality: nationality,
-      account_id: accountId,
+      long_bio: long_bio,
+      user_id: user.dataValues.id,
     })
-      .then((user) => {
+      .then((isp) => {
         // send response
         res.status(201).json({
-          message: "User profile Created Successfully",
+          message: "ISP profile Created Successfully",
           data: {
-            user: user.dataValues,
+            isp: isp.dataValues,
           },
         });
       })
@@ -81,9 +96,9 @@ const createUsers = async (req, res) => {
       });
   } else {
     res.status(401).json({
-      message: "Account Already has a User Profile",
+      message: "Account Already has an ISP Profile",
     });
   }
 };
 
-module.exports = createUsers;
+module.exports = createProfile;
