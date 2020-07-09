@@ -6,7 +6,7 @@ const { validationResult } = require("express-validator");
  * @param {Object} req
  * @param {Object} res
  */
-const createProfile = async (req, res) => {
+const updateProfile = async (req, res) => {
   // Finds the validation errors in this request and wraps them in an object with handy functions
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
@@ -38,17 +38,19 @@ const createProfile = async (req, res) => {
       account_id: accountId,
     },
   });
-
   /**
-   * @description Check if the Account already has a user profile.
-   * if not,  then create one, else, reject
+   * @description Check if the profile exists
    */
   const isp = await ISP_Profiles.findOne({
     where: {
       user_id: user.dataValues.id,
     },
   });
-  if (!isp) {
+  /**
+   * @If the profile exists, then update it
+   * @else throw an error
+   */
+  if (isp) {
     /**
      * @description Check if the user added a profile image
      */
@@ -56,30 +58,42 @@ const createProfile = async (req, res) => {
     let cover_photo = req.files.cover_photo
       ? req.files.cover_photo[0].path
       : "";
+
     // Create the record and insert to database
-    ISP_Profiles.create({
-      first_name: first_name,
-      last_name: last_name,
-      email: email,
-      gender: gender,
-      mobile: mobile,
-      avatar: avatar,
-      cover_photo: cover_photo,
-      short_bio: short_bio,
-      category: category,
-      address: address,
-      city: city,
-      state: state,
-      nationality: nationality,
-      long_bio: long_bio,
-      user_id: user.dataValues.id,
-    })
+    ISP_Profiles.update(
+      {
+        first_name: first_name,
+        last_name: last_name,
+        email: email,
+        gender: gender,
+        mobile: mobile,
+        avatar: avatar,
+        cover_photo: cover_photo,
+        short_bio: short_bio,
+        category: category,
+        address: address,
+        city: city,
+        state: state,
+        nationality: nationality,
+        long_bio: long_bio,
+        user_id: user.dataValues.id,
+      },
+      {
+        where: {
+          user_id: user.dataValues.id,
+        },
+        returning: true,
+      }
+    )
       .then((isp) => {
-        // send response
+        /**
+         * @description Responce in json
+         * @type an array of(1) the number of affected rows, (2) the returned updated element in an array
+         */
         res.status(201).json({
-          message: "ISP profile Created Successfully",
+          message: "ISP profile Updated Successfully",
           data: {
-            isp: isp.dataValues,
+            isp: isp[1][0].dataValues,
           },
         });
       })
@@ -90,10 +104,10 @@ const createProfile = async (req, res) => {
         });
       });
   } else {
-    res.status(401).json({
-      message: "Account Already has an ISP Profile",
+    res.status(500).json({
+      message: "Profile Does not exist",
     });
   }
 };
 
-module.exports = createProfile;
+module.exports = updateProfile;

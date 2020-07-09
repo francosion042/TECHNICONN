@@ -7,7 +7,7 @@ const { validationResult } = require("express-validator");
  * @param {Object} req
  * @param {Object} res
  */
-const createUsers = async (req, res) => {
+const updateUsers = async (req, res) => {
   // Finds the validation errors in this request and wraps them in an object with handy functions
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
@@ -39,32 +39,40 @@ const createUsers = async (req, res) => {
       account_id: accountId,
     },
   });
-  if (!user) {
+  if (user) {
     /**
      * @description Check if the user added a profile image
      */
     let image = req.file ? req.file.path : "";
 
-    // Create the record and insert to database
-    Users.create({
-      first_name: first_name,
-      last_name: last_name,
-      gender: gender,
-      mobile: mobile,
-      avatar: image,
-      short_bio: short_bio,
-      address: address,
-      city: city,
-      state: state,
-      nationality: nationality,
-      account_id: accountId,
-    })
+    // Update the record and insert to database
+    Users.update(
+      {
+        first_name: first_name,
+        last_name: last_name,
+        gender: gender,
+        mobile: mobile,
+        avatar: image,
+        short_bio: short_bio,
+        address: address,
+        city: city,
+        state: state,
+        nationality: nationality,
+        account_id: accountId,
+      },
+      {
+        where: {
+          account_id: accountId,
+        },
+        returning: true,
+      }
+    )
       .then((user) => {
         // send response
         res.status(201).json({
-          message: "User profile Created Successfully",
+          message: "User profile Updated Successfully",
           data: {
-            user: user.dataValues,
+            user: user[1][0].dataValues,
           },
         });
       })
@@ -76,9 +84,9 @@ const createUsers = async (req, res) => {
       });
   } else {
     res.status(401).json({
-      message: "Account Already has a User Profile",
+      message: "User Profile does not exist",
     });
   }
 };
 
-module.exports = createUsers;
+module.exports = updateUsers;
