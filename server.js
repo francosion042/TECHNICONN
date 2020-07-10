@@ -2,7 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 require("./config/services/cloudinaryConfig");
 const cors = require("cors");
-// const expressFileUpload = require("express-fileupload");
 const app = express();
 require("./config/database/db");
 require("./models/index");
@@ -14,11 +13,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 /**
  * @description calling the Cloudinary middleware
  */
-// app.use("*", cloudinaryConfig);
 
 // app.use(cors());
 
-// app.use(expressFileUpload());
 /**
  * The syncDB variable has a .CreateTables and a .DropTables function.
  * each should be run depending on the need
@@ -51,6 +48,12 @@ app.use("/api/v1", require("./routes/api/users"));
  */
 app.use("/api/v1", require("./routes/api/isp"));
 
+/**
+ * @description CSP profile creation route
+ */
+app.use("/api/v1", require("./routes/api/csp"));
+
+//////////////////////////////////////////////////////////////////////////////////////////////
 const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
