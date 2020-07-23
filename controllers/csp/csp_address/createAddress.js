@@ -1,20 +1,19 @@
-const { CSP_Profiles } = require("../../models/CSP");
-const { Users } = require("../../models/Users");
+const { CSP_Profiles, CSP_Addresses } = require("../../../models/CSP");
+const { Users } = require("../../../models/Users");
 const { validationResult } = require("express-validator");
 /**
  * @description function for the ISP profile creation
  * @param {Object} req
  * @param {Object} res
  */
-const createProfile = async (req, res) => {
+const createAddress = async (req, res) => {
   // Finds the validation errors in this request and wraps them in an object with handy functions
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(422).json({ errors: errors.array() });
   }
 
-  // get the form fields from the request body
-  const { name, email, short_bio, category, about_company, reg_no } = req.body;
+  const { street, city, zip_code, state, country, is_headquarters } = req.body;
 
   // Get the accountId from the Token payload
   const { accountId } = req.user;
@@ -35,32 +34,22 @@ const createProfile = async (req, res) => {
       user_id: user.dataValues.id,
     },
   });
-  if (!csp) {
-    /**
-     * @description Check if the user added a profile image
-     */
-    let avatar = req.files.avatar ? req.files.avatar[0].path : "";
-    let cover_photo = req.files.cover_photo
-      ? req.files.cover_photo[0].path
-      : "";
-    // Create the record and insert to database
-    CSP_Profiles.create({
-      name: name,
-      email: email,
-      avatar: avatar,
-      cover_photo: cover_photo,
-      short_bio: short_bio,
-      category: category,
-      about_company: about_company,
-      reg_no: reg_no,
-      user_id: user.dataValues.id,
+  if (csp) {
+    CSP_Addresses.create({
+      street: street,
+      city: city,
+      zip_code: zip_code,
+      state: state,
+      country: country,
+      is_headquarters: is_headquarters,
+      csp_id: csp.dataValues.id,
     })
-      .then((csp) => {
+      .then((address) => {
         // send response
         res.status(201).json({
-          message: "CSP profile Created Successfully",
+          message: "CSP profile Address Created Successfully",
           data: {
-            csp: csp.dataValues,
+            address: address.dataValues,
           },
         });
       })
@@ -72,9 +61,7 @@ const createProfile = async (req, res) => {
       });
   } else {
     res.status(401).json({
-      message: "Account Already has an CSP Profile",
+      message: "Account doesn't have a CSP Profile",
     });
   }
 };
-
-module.exports = createProfile;
